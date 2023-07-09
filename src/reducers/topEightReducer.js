@@ -2,14 +2,14 @@ import { UPDATE_TOP_EIGHT_LINEUP } from '../actions/types';
 
 const initialState = {
     topEightBattlersList: [
-        { name: "wonwoo" },
-        { name: "mingyu" },
-        { name: "jeonghan" },
-        { name: "hoshi" },
-        { name: "joshua" },
-        { name: "scoups" },
-        { name: "woozi" },
-        { name: "DK" }
+        { name: "" },
+        { name: "" },
+        { name: "" },
+        { name: "" },
+        { name: "" },
+        { name: "" },
+        { name: "" },
+        { name: "" }
     ],
     numTest: 6
 }

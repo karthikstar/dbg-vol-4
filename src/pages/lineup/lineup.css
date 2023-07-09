@@ -1,0 +1,7 @@
+.lineup-text {
+    background-color: #db6009;
+    border: 2px solid #fff !important;
+    border-radius: 16px;
+    text-align: center !important;
+    font-family: var(--font-family);
+}
