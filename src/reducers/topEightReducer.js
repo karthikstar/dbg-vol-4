@@ -10,8 +10,7 @@ const initialState = {
         { name: "" },
         { name: "" },
         { name: "" }
-    ],
-    numTest: 6
+    ]
 }
 
 const topEightReducer = (state = initialState, action) => {
