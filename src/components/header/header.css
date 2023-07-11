@@ -3,7 +3,8 @@
     justify-content: space-between;
     align-items: center;
 
-    padding: 2rem 2rem;
+    padding: 1rem 2rem;
+    height: auto;
 }
 
 .gradient__bg {
@@ -37,12 +38,12 @@
 }
 
 .header__logotitle-logo img {
-   width: 150px;
+   width: 100px;
    height: auto;
 }
 
 .header__logotitle-title {
     color: #fff;
-    font-size: 1.875em;
+    font-size: 1.5rem;
     margin-right: 4rem;
 }
