@@ -1,0 +1,57 @@
+.suit-container {
+    width: 100%;
+    padding: 2rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.suit-firstrow {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 1rem 0;
+}
+
+.suit-secondrow {
+    display: flex;
+    justify-content: center;
+}
+
+.card-container {
+    width: 30%;
+    height: auto;
+    margin: 0rem 1rem;
+    padding: 2rem 2rem;
+    border: 8px solid #c75006;
+    border-radius: 24px;
+    background-color: #000;
+}
+
+.card__logotitle {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__logotitle-logo {
+    height: 48px;
+    width: auto;
+}
+
+.card__logotitle-title {
+    font-size: 36px;
+    font-family: var(--font-family);
+    color : #fff;
+}
+
+.card__scoreboard {
+    padding: 4rem 0rem;
+    display: flex;
+    justify-content: center;
+}
+
+.card__scoreboard-points {
+    color: #fff;
+    font-family: var(--font-family);
+    font-size: 56px;
+}
