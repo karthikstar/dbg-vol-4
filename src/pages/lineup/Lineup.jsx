@@ -1,18 +1,21 @@
-import React, { useEffect, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { updateTopEightLineup } from '../../actions/topEightActions';
-import Card from '../../components/card/Card';
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
-import './lineup.css';
 import { updateTopFourLineup } from '../../actions/topFourActions';
+import TextField from '@mui/material/TextField';
+import dbgLogo from '../../assets/dbg_logo.png';
+import dbgLineupBackground from '../../assets/dbg_lineup_background.png';
+import './lineup.css';
 
 const Lineup = (props) => {
     const [refreshLineup, setRefreshLineup] = useState(false)
 
     return (
         <div className="lineup-container">
+            <div className="lineup__background">
+                <img src={dbgLogo} className="lineup__background-dbg" />
+                <img src={dbgLineupBackground} className="lineup__background-tree" />
+            </div>
             <div className="lineup__header">
                 <button className="lineup__header-buttons" onClick={() => {randomizeLineup(props.topEightList, true); setRefreshLineup((prev) => !prev);}}>
                     Randomize Top Eight

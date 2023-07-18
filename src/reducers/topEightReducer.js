@@ -28,6 +28,4 @@ const topEightReducer = (state = initialState, action) => {
     }
 } 
 
-
-
 export default topEightReducer;
