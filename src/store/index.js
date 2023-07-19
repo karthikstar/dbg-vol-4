@@ -1,27 +1,22 @@
-import { configureStore } from '@reduxjs/toolkit'
-import rootReducer from '../reducers/index'
+import { configureStore } from '@reduxjs/toolkit';
+import rootReducer from '../reducers/index';
+import storage from 'redux-persist/lib/storage';
+import { persistReducer, persistStore } from 'redux-persist';
+import thunk from 'redux-thunk';
+import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2';
 
-const preloadedState = {
-  topEight: {
-    topEightBattlersList: [
-      { id: 0, name: 'syasya' },
-      { id: 1, name: 'ggg'}
-    ],
-    numTest: 6
-  }
+const persistConfig = {
+  key: 'root',
+  storage,
+  stateReconciler: autoMergeLevel2
 }
 
-const store = configureStore({
-  reducer: rootReducer
+const persistedReducer = persistReducer(persistConfig, rootReducer)
+
+export const store = configureStore({
+  reducer: persistedReducer,
+  devTools: process.env.NODE_ENV !== 'production',
+  middleware: [thunk]
 })
 
-export default store;
-console.log(store.getState());
-
-//import { createStore } from 'redux';
-
-
-
-// const store = createStore(rootReducer, preloadedState)
-
-//export default store
+export const persistor = persistStore(store)
