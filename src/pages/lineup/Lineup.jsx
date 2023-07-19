@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { updateTopEightLineup } from '../../actions/topEightActions';
-import { updateTopFourLineup } from '../../actions/topFourActions';
+import { updateTopEightLineup } from '../../actions/lineupActions';
+import { updateTopFourLineup } from '../../actions/lineupActions';
+import { updateTopTwoLineup } from '../../actions/lineupActions';
 import TextField from '@mui/material/TextField';
 import dbgLogo from '../../assets/dbg_logo.png';
 import dbgLineupBackground from '../../assets/dbg_lineup_background.png';
@@ -33,7 +34,7 @@ const Lineup = (props) => {
                                 InputLabelProps={{shrink: false}}
                                 className="lineup-text top-eight"
                                 value={props.topEightList[0].name}
-                                onChange={(event) => {changeNameInLineup(0, event.target.value, props.topEightList, true); setRefreshLineup((prev) => !prev);}}
+                                onChange={(event) => {changeNameInLineup(0, event.target.value, props.topEightList, "eight"); setRefreshLineup((prev) => !prev);}}
                             />
                         </td>
                         <td rowspan="2" className="lineup__content-table-col">
@@ -42,7 +43,7 @@ const Lineup = (props) => {
                                 InputLabelProps={{shrink: false}}
                                 className="lineup-text top-four"
                                 value={props.topFourList[0].name}
-                                onChange={(event) => {changeNameInLineup(0, event.target.value, props.topFourList, false); setRefreshLineup((prev) => !prev);}}
+                                onChange={(event) => {changeNameInLineup(0, event.target.value, props.topFourList, "four"); setRefreshLineup((prev) => !prev);}}
                             />
                         </td>
                         <td rowspan="4" className="lineup__content-table-col">
@@ -50,6 +51,8 @@ const Lineup = (props) => {
                                 label=" " 
                                 InputLabelProps={{shrink: false}}
                                 className="lineup-text top-two"
+                                value={props.topTwoList[0].name}
+                                onChange={(event) => {changeNameInLineup(0, event.target.value, props.topTwoList, "two"); setRefreshLineup((prev) => !prev);}}
                             />
                         </td>
                         <td rowspan="4" className="lineup__content-table-col">
@@ -57,6 +60,8 @@ const Lineup = (props) => {
                                 label=" "
                                 InputLabelProps={{shrink: false}}
                                 className="lineup-text top-two"
+                                value={props.topTwoList[1].name}
+                                onChange={(event) => {changeNameInLineup(1, event.target.value, props.topTwoList, "two"); setRefreshLineup((prev) => !prev);}}
                             />
                         </td>
                         <td rowspan="2" className="lineup__content-table-col">
@@ -65,7 +70,7 @@ const Lineup = (props) => {
                                 InputLabelProps={{shrink: false}}
                                 className="lineup-text top-four"
                                 value={props.topFourList[2].name}
-                                onChange={(event) => {changeNameInLineup(2, event.target.value, props.topFourList, false); setRefreshLineup((prev) => !prev);}}
+                                onChange={(event) => {changeNameInLineup(2, event.target.value, props.topFourList, "four"); setRefreshLineup((prev) => !prev);}}
                             />
                         </td>
                         <td className="lineup__content-table-col">
@@ -74,7 +79,7 @@ const Lineup = (props) => {
                                 InputLabelProps={{shrink: false}}
                                 className="lineup-text top-eight"
                                 value={props.topEightList[4].name}
-                                onChange={(event) => {changeNameInLineup(4, event.target.value, props.topEightList, true); setRefreshLineup((prev) => !prev);}}
+                                onChange={(event) => {changeNameInLineup(4, event.target.value, props.topEightList, "eight"); setRefreshLineup((prev) => !prev);}}
                             />
                         </td>
                     </tr>
@@ -85,7 +90,7 @@ const Lineup = (props) => {
                                 InputLabelProps={{shrink: false}}
                                 className="lineup-text top-eight"
                                 value={props.topEightList[1].name}
-                                onChange={(event) => {changeNameInLineup(1, event.target.value, props.topEightList, true); setRefreshLineup((prev) => !prev);}}
+                                onChange={(event) => {changeNameInLineup(1, event.target.value, props.topEightList, "eight"); setRefreshLineup((prev) => !prev);}}
                             />
                         </td>
                         <td className="lineup__content-table-col">
@@ -94,7 +99,7 @@ const Lineup = (props) => {
                                 InputLabelProps={{shrink: false}}
                                 className="lineup-text top-eight"
                                 value={props.topEightList[5].name}
-                                onChange={(event) => {changeNameInLineup(5, event.target.value, props.topEightList, true); setRefreshLineup((prev) => !prev);}}
+                                onChange={(event) => {changeNameInLineup(5, event.target.value, props.topEightList, "eight"); setRefreshLineup((prev) => !prev);}}
                             />
                         </td>
                     </tr>
@@ -105,7 +110,7 @@ const Lineup = (props) => {
                                 InputLabelProps={{shrink: false}}
                                 className="lineup-text top-eight"
                                 value={props.topEightList[2].name}
-                                onChange={(event) => {changeNameInLineup(2, event.target.value, props.topEightList, true); setRefreshLineup((prev) => !prev);}}
+                                onChange={(event) => {changeNameInLineup(2, event.target.value, props.topEightList, "eight"); setRefreshLineup((prev) => !prev);}}
                             />
                         </td>
                         <td rowspan="2" className="lineup__content-table-col">
@@ -114,7 +119,7 @@ const Lineup = (props) => {
                                 InputLabelProps={{shrink: false}}
                                 className="lineup-text top-four"
                                 value={props.topFourList[1].name}
-                                onChange={(event) => {changeNameInLineup(1, event.target.value, props.topFourList, false); setRefreshLineup((prev) => !prev);}}
+                                onChange={(event) => {changeNameInLineup(1, event.target.value, props.topFourList, "four"); setRefreshLineup((prev) => !prev);}}
                             />
                         </td>
                         <td rowspan="2" className="lineup__content-table-col">
@@ -123,7 +128,7 @@ const Lineup = (props) => {
                                 InputLabelProps={{shrink: false}}
                                 className="lineup-text top-four"
                                 value={props.topFourList[3].name}
-                                onChange={(event) => {changeNameInLineup(3, event.target.value, props.topFourList, false); setRefreshLineup((prev) => !prev);}}
+                                onChange={(event) => {changeNameInLineup(3, event.target.value, props.topFourList, "four"); setRefreshLineup((prev) => !prev);}}
                             />
                         </td>
                         <td className="lineup__content-table-col">
@@ -132,7 +137,7 @@ const Lineup = (props) => {
                                 InputLabelProps={{shrink: false}}
                                 className="lineup-text top-eight"
                                 value={props.topEightList[6].name}
-                                onChange={(event) => {changeNameInLineup(6, event.target.value, props.topEightList, true); setRefreshLineup((prev) => !prev);}}
+                                onChange={(event) => {changeNameInLineup(6, event.target.value, props.topEightList, "eight"); setRefreshLineup((prev) => !prev);}}
                             />
                         </td>
                     </tr>
@@ -143,7 +148,7 @@ const Lineup = (props) => {
                                 InputLabelProps={{shrink: false}}
                                 className="lineup-text top-eight"
                                 value={props.topEightList[3].name}
-                                onChange={(event) => {changeNameInLineup(3, event.target.value, props.topEightList, true); setRefreshLineup((prev) => !prev);}}
+                                onChange={(event) => {changeNameInLineup(3, event.target.value, props.topEightList, "eight"); setRefreshLineup((prev) => !prev);}}
                             />
                         </td>
                         <td className="lineup__content-table-col">
@@ -152,7 +157,7 @@ const Lineup = (props) => {
                                 InputLabelProps={{shrink: false}} 
                                 className="lineup-text top-eight"
                                 value={props.topEightList[7].name}
-                                onChange={(event) => {changeNameInLineup(7, event.target.value, props.topEightList, true); setRefreshLineup((prev) => !prev);}}
+                                onChange={(event) => {changeNameInLineup(7, event.target.value, props.topEightList, "eight"); setRefreshLineup((prev) => !prev);}}
                             />
                         </td>
                     </tr>
@@ -169,22 +174,26 @@ const randomizeLineup = (lineup, isTopEight) => {
     isTopEight ? updateTopEightLineup(sortedLineup) : updateTopFourLineup(sortedLineup);
 }
 
-const changeNameInLineup = (index, newName, lineup, isTopEight) => {
+const changeNameInLineup = (index, newName, lineup, listType) => {
     lineup[index] = { name: newName };
-    isTopEight ? updateTopEightLineup(lineup) : updateTopFourLineup(lineup);
+    if (listType = "eight") updateTopEightLineup(lineup);
+    else if (listType = "four") updateTopFourLineup(lineup);
+    else updateTopTwoLineup(lineup);
 }
 
 const mapStateToProps = state => {
     return {
-        topEightList: state.topEight.topEightBattlersList,
-        topFourList: state.topFour.topFourBattlersList
+        topEightList: state.lineup.topEightBattlersList,
+        topFourList: state.lineup.topFourBattlersList,
+        topTwoList: state.lineup.topTwoBattlersList
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
         updateTopEightLineup: newLineup => dispatch(updateTopEightLineup(newLineup)),
-        updateTopFourLineup: newLineup => dispatch(updateTopFourLineup(newLineup))
+        updateTopFourLineup: newLineup => dispatch(updateTopFourLineup(newLineup)),
+        updateTopTwoLineup: newLineup => dispatch(updateTopTwoLineup(newLineup))
     }
 }
 
