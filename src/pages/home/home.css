@@ -3,13 +3,22 @@
     width: 100%;
 }
 
+.home-background {
+    height: 100vh;
+    width: 100vw;
+    opacity: 0.3;
+    position: absolute;
+}
+
 .home__text {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     color: #fff;
     font-family: var(--font-family);
     padding: 4rem 0 2rem 0;
+    z-index: 2;
 }
 
 .home__text-first {
@@ -22,10 +31,21 @@
     font-size: 48px;
 }
 
+.home__text-third {
+    text-align: left;
+    font-size: 36px;
+    white-space: pre-wrap;
+    padding: 0 2vw 0 0;
+    width: 25vw;
+    height: 200px;
+}
+
 .home__logo-container {
+    position: relative;
     display: flex;
     justify-content: center;
     padding: 2rem;
+    z-index: 2;
 }
 
 .home__logo {
@@ -41,6 +61,7 @@
 .home__logo-img {
     height: 200px;
     width: 200px;
+    z-index: 2;
 }
 
 .home__logo-text {
@@ -49,4 +70,12 @@
     font-family: var(--font-family);
     color: #fff;
     padding: 1rem 0;
+}
+
+.home__telegram-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 2rem;
+    z-index: 2;
 }
