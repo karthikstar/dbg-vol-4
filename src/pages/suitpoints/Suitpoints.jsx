@@ -8,11 +8,20 @@ import spadeSuitLogo from '../../assets/spadeSuitLogo.png';
 import { updateSuitPoints } from '../../actions/suitActions';
 import './suitpoints.css';
 
+const textLineupStyle = {
+    color: "white",
+    textAlign: "center",
+    fontFamily: "Orbitron, Roboto, Verdana",
+    fontWeight: "bold",
+    fontSize: "56px"
+}
+
 const Suitpoints = (props) => {
     const [refreshLineup, setRefreshLineup] = useState(false)
 
     return (
         <div className="suit-container">
+            <p className="suit-heading">TOP 32 SUIT POINTS</p>
             <div className="suit-firstrow">
                 <div className="card-container">
                     <div className="card__logotitle">
@@ -25,12 +34,7 @@ const Suitpoints = (props) => {
                             label=" " 
                             InputLabelProps={{shrink: false}} 
                             className="card__scoreboard-points"
-                            inputProps={{
-                                sx: {
-                                color: 'white',
-                                textAlign: 'center'
-                                },
-                            }}
+                            inputProps={{ style:textLineupStyle }}
                             value={props.suitPointsList[0].points}
                             onChange={(event) => {changeSuitPoints(0, event.target.value, props.suitPointsList); setRefreshLineup((prev) => !prev);}}
                         />
@@ -47,12 +51,7 @@ const Suitpoints = (props) => {
                             label=" " 
                             InputLabelProps={{shrink: false}} 
                             className="card__scoreboard-points"
-                            inputProps={{
-                                sx: {
-                                color: 'white',
-                                textAlign: 'center'
-                                },
-                            }}
+                            inputProps={{ style:textLineupStyle }}
                             value={props.suitPointsList[1].points}
                             onChange={(event) => {changeSuitPoints(1, event.target.value, props.suitPointsList); setRefreshLineup((prev) => !prev);}}
                         />
@@ -71,12 +70,7 @@ const Suitpoints = (props) => {
                             label=" " 
                             InputLabelProps={{shrink: false}} 
                             className="card__scoreboard-points"
-                            inputProps={{
-                                sx: {
-                                color: 'white',
-                                textAlign: 'center'
-                                },
-                            }}
+                            inputProps={{ style:textLineupStyle }}
                             value={props.suitPointsList[2].points}
                             onChange={(event) => {changeSuitPoints(2, event.target.value, props.suitPointsList); setRefreshLineup((prev) => !prev);}}
                         />
@@ -93,12 +87,7 @@ const Suitpoints = (props) => {
                             label=" " 
                             InputLabelProps={{shrink: false}} 
                             className="card__scoreboard-points"
-                            inputProps={{
-                                sx: {
-                                color: 'white',
-                                textAlign: 'center'
-                                },
-                            }}
+                            inputProps={{ style:textLineupStyle }}
                             value={props.suitPointsList[3].points}
                             onChange={(event) => {changeSuitPoints(3, event.target.value, props.suitPointsList); setRefreshLineup((prev) => !prev);}}
                         />

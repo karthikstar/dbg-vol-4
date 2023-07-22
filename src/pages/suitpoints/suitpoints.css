@@ -1,16 +1,25 @@
 .suit-container {
-    width: 100%;
-    padding: 2rem;
-    margin-top: 2rem;
+    height: 100vh;
+    width: auto;
+    margin: 0 8vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
+.suit-heading {
+    color: #ffffff;
+    font-family: var(--font-family);
+    font-weight: bold;
+    font-size: 4vh;
+    text-align: center;
+    margin: 1vh 0;
+}
+
 .suit-firstrow {
     display: flex;
     justify-content: center;
-    margin: 0 0 1rem 0;
+    margin: 4vh 0;
 }
 
 .suit-secondrow {
@@ -19,39 +28,44 @@
 }
 
 .card-container {
-    width: 30%;
+    width: auto;
     height: auto;
-    margin: 0rem 1rem;
-    padding: 2rem 2rem;
-    border: 8px solid #c75006;
+    min-width: 360px;
+    max-width: 40vw;
+    margin: 0 2vh;
+    padding: 2vh 2vh;
+    border: 8px solid #fa5d02;
     border-radius: 24px;
-    background-color: #000;
+    background-color: #000000;
 }
 
 .card__logotitle {
     display: flex;
     justify-content: space-between;
+    padding: 2vh;
 }
 
 .card__logotitle-logo {
-    height: 48px;
+    max-height: 48px;
     width: auto;
 }
 
 .card__logotitle-title {
     font-size: 36px;
     font-family: var(--font-family);
+    font-weight: bold;
     color : #fff;
 }
 
 .card__scoreboard {
-    padding: 4rem 0rem;
+    padding: 6vh 0vh;
     display: flex;
     justify-content: center;
+    height: auto;
 }
 
 .card__scoreboard-points {
     color: #fff;
     font-family: var(--font-family);
-    font-size: 56px;
+    font-size: auto;
 }
