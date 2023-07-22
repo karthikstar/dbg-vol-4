@@ -9,7 +9,7 @@ const Header = () => {
         <div className="header gradient__bg">
             <div className="header__logotitle">
                 <div className="header__logotitle-logo">
-                    <NavLink className="navbar-item" activeClassName="is-active" to="/" exact>
+                    <NavLink className="navbar-item" to="/" exact="true">
                         <img src={logo} alt="logo" />
                     </NavLink>
                 </div>

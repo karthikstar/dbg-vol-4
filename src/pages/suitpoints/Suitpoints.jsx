@@ -102,6 +102,7 @@ const Suitpoints = (props) => {
 
 const changeSuitPoints = (index, newPoints, suitPointsList) => {
     suitPointsList[index] = { points: newPoints };
+    localStorage.setItem("suit", JSON.stringify({suitPointsList: suitPointsList}));
     updateSuitPoints(suitPointsList);
 }
 
