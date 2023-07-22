@@ -1,7 +1,3 @@
-import { UPDATE_DIAMOND_SUIT_POINTS } from '../actions/types';
-import { UPDATE_HEART_SUIT_POINTS } from '../actions/types';
-import { UPDATE_CLUB_SUIT_POINTS } from '../actions/types';
-import { UPDATE_SPADE_SUIT_POINTS } from '../actions/types';
 import { UPDATE_SUIT_POINTS } from '../actions/types';
 
 // suit points order : diamond, club, heart, spade
