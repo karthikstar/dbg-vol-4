@@ -37,7 +37,7 @@
     padding-right: 4vw;
     z-index: 9;
     position: relative;
-    margin-top: 16vh;
+    margin-top: 2vh;
 }
 
 .lineup__header-buttons {
@@ -69,15 +69,18 @@
     z-index: 2;
     position: relative;
     height: 50vh;
+
 }
 
 .lineup__content-table {
     margin: 0 2vw;
     table-layout: fixed;
+    width: 100%;
 }
 
 .lineup__content-table-col {
     padding: 1vh 2rem;
+    width: 150px !important
 }
 
 .lineup__content-table-row {
@@ -90,4 +93,28 @@
     width: 100%;
     height: auto;
     line-height: 16px;
+}
+
+.color-yellow {
+    background-color: rgb(255, 251, 0);
+}
+
+.color-orange {
+    background-color: #fa5d02;
+}
+
+.color-blue {
+    background-color: blue;
+}
+
+.color-red {
+    background-color: red;
+}
+
+.color-purple {
+    background-color: purple;
+}
+
+.color-green {
+    background-color: green;
 }

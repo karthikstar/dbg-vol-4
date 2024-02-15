@@ -12,7 +12,7 @@ const Navbar = () => {
                 <p>Top 32 Point System</p>
             </NavLink>
             <NavLink exact="true" className={({isActive}) => isActive ? "header__navbar-link--active" : "header__navbar-link" } to="/lineup">
-                <p>Battle Lineup</p>
+                <p>Junior Battle Lineup</p>
             </NavLink>
         </div>
     )

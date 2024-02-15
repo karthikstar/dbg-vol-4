@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Navbar from '../navbar/Navbar';
-import logo from '../../assets/dbg_logo.png';
+import logo from '../../assets/mj_logo.png';
 import './header.css';
 
 const Header = () => {
@@ -14,7 +14,7 @@ const Header = () => {
                     </NavLink>
                 </div>
                 <div className="header__logotitle-title">
-                    d'Battleground Vol.4
+                    Beat IT Vol. 2
                 </div>
             </div>
             <div className="header__navbar">
