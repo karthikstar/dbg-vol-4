@@ -3,42 +3,48 @@ import dbgIgLogo from '../../assets/dbg_ig.png'
 import dhopsIgLogo from '../../assets/dhops_ig.png'
 import dhopsYtLogo from '../../assets/dhops_yt.png'
 import thriftIgLogo from '../../assets/thrift_ig.png'
-import dbgBackground from '../../assets/dbg_background.png'
+import artistateLogo from '../../assets/artistate2.png'
+import cardenLogo from '../../assets/cardensg.jpg'
+import mamadiamLogo from '../../assets/mamadiam.png'
+
+import heinekenLogo from '../../assets/heineken2.png'
+
+// import dbgBackground from '../../assets/dbg_background.png'
 import dbgTeleLogo from '../../assets/dbg_tele.png'
 import './home.css'
 
 const Home = () => {
     return (
         <div className="home">
-            <img src={dbgBackground} className="home-background" />
+            <img className="home-background" />
             <div className="home__text">
-                <p className="home__text-first">WELCOME!!</p>
-                <p className="home__text-second">FEEL FREE TO FOLLOW OUR SOCIALS</p>
+                <p className="home__text-first">WELCOME TO MJ BEAT IT VOL. 2!</p>
+                <p className="home__text-second">FEEL FREE TO FOLLOW OUR SPONSORS</p>
             </div>
             <div className="home__logo-container">
                 <div className="home__logo">
-                    <img src={dbgIgLogo} className="home__logo-img" />
-                    <p className="home__logo-text">d'Battleground IG</p>
+                    <img src={cardenLogo} className="home__logo-img" />
+                    <p className="home__logo-text">Carden SG <br></br>(@carden.sg)</p>
                 </div>
                 <div className="home__logo">
-                    <img src={dhopsIgLogo} className="home__logo-img" />
-                    <p className="home__logo-text">NUS d'Hoppers IG</p>
+                    <img src={mamadiamLogo} className="home__logo-img" />
+                    <p className="home__logo-text">Mama Diam <br></br>(@mamadiam.prinsep)</p>
                 </div>
                 <div className="home__logo">
-                    <img src={dhopsYtLogo} className="home__logo-img" />
-                    <p className="home__logo-text">NUS d'Hoppers Youtube</p>
+                    <img src={artistateLogo} className="home__logo-img" />
+                    <p className="home__logo-text">Artistate <br></br> (@artistatesg)</p>
                 </div>
                 <div className="home__logo">
-                    <img src={thriftIgLogo} className="home__logo-img" />
-                    <p className="home__logo-text">Thrifthoppers IG</p>
+                    <img src={heinekenLogo} className="home__logo-img" />
+                    <p className="home__logo-text">Heineken <br></br>(@heinekensg)</p>
                 </div>
             </div>
-            <div className="home__telegram-container">
+            {/* <div className="home__telegram-container">
                 <div className="home__text home__text-third">
                     <p>Have you joined d'Battleground's telegram channel?</p>
                 </div>
                 <img src={dbgTeleLogo} className="home__logo-img" />
-            </div>
+            </div> */}
         </div>
     )
 }

@@ -43,7 +43,7 @@
 .home__logo-container {
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     padding: 2rem;
     z-index: 2;
 }
