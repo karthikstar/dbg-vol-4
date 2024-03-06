@@ -100,7 +100,7 @@
 }
 
 .color-orange {
-    background-color: #fa5d02;
+    background-color: rgba(142, 60, 3, 1)
 }
 
 .color-blue {
@@ -117,4 +117,40 @@
 
 .color-green {
     background-color: green;
+}
+
+.color-one {
+    background-color: #e0b710;
+}
+
+.color-two {
+    background-color: red
+}
+
+.color-three {
+    background-color: #e08610
+}
+
+.color-four {
+    background-color: purple
+}
+
+.color-five {
+    background-color: #0a6df0
+}
+
+.color-six {
+    background-color: #0aa61f
+}
+
+.color-gold {
+    background-color: #DBAC34;
+}
+
+.color-range {
+    background-color: orange;
+}
+
+.top-two {
+    padding: 50;
 }

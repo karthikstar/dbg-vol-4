@@ -6,15 +6,22 @@ import { saveState } from '../localStorage'
 const initialState = {
     topTwoBattlersList: [
         { name: "" },
-        { name: "" }
+        { name: "" },
+        { name: "" }  
     ],
     topFourBattlersList: [
+        { name: "" },
+        { name: "" },
         { name: "" },
         { name: "" },
         { name: "" },
         { name: "" }
     ],
     topEightBattlersList: [
+        { name: "" },
+        { name: "" },
+        { name: "" },
+        { name: "" },
         { name: "" },
         { name: "" },
         { name: "" },

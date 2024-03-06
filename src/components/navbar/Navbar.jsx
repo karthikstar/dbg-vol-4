@@ -8,9 +8,9 @@ const Navbar = () => {
             <NavLink exact="true" className={({isActive}) => isActive ? "header__navbar-link--active" : "header__navbar-link" } to="/eventflow">
                 <p>Event Flow</p>
             </NavLink>
-            <NavLink exact="true" className={({isActive}) => isActive ? "header__navbar-link--active" : "header__navbar-link" } to="/suitpoints">
+            {/* <NavLink exact="true" className={({isActive}) => isActive ? "header__navbar-link--active" : "header__navbar-link" } to="/suitpoints">
                 <p>Top 32 Point System</p>
-            </NavLink>
+            </NavLink> */}
             <NavLink exact="true" className={({isActive}) => isActive ? "header__navbar-link--active" : "header__navbar-link" } to="/lineup">
                 <p>Junior Battle Lineup</p>
             </NavLink>
