@@ -11,7 +11,7 @@ import './lineup.css';
 const textLineupStyle = {
     color: "white",
     textAlign: "center",
-    fontFamily: "Orbitron, Roboto, Verdana",
+    fontFamily: "Open Sauce One",
     fontWeight: "bold",
     fontSize: "16px"
 }

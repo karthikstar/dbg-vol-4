@@ -16,7 +16,7 @@ import './home.css'
 const Home = () => {
     return (
         <div className="home">
-            <img className="home-background" />
+            {/* <img className="home-background" /> */}
             <div className="home__text">
                 <p className="home__text-first">WELCOME TO MJ BEAT IT VOL. 2!</p>
                 <p className="home__text-second">FEEL FREE TO FOLLOW OUR SPONSORS</p>
